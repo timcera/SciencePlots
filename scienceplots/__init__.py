@@ -7,7 +7,7 @@ import scienceplots
 
 # register the included stylesheet in the matplotlib style library
 scienceplots_path = scienceplots.__path__[0]
-styles_path = join(scienceplots_path, 'styles')
+styles_path = join(scienceplots_path, "styles")
 
 # Reads styles in /styles
 stylesheets = plt.style.core.read_style_directory(styles_path)
