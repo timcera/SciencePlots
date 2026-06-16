@@ -343,7 +343,7 @@ for index in range(1, 23 + 1):
     figure_name = f"fig_dr_{index}.jpg"
     with plt.style.context(["science", "no-latex", style_name]):
         fig, ax = plt.subplots()
-        for p in p_list[: index]:
+        for p in p_list[:index]:
             ax.plot(x, model(x, p))
         ax.autoscale(tight=True)
         ax.set(**pparam)

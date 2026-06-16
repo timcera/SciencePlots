@@ -1,5 +1,4 @@
-"""Test suite of SciencePlots
-"""
+"""Test suite of SciencePlots"""
 
 import matplotlib.pyplot as plt
 
@@ -26,7 +25,9 @@ def test_styles_existence(styles_in_scienceplots_per_folder):
 
 
 def test_usage_of_each_style(
-    xy_example_values, styles_in_scienceplots_per_folder, tmp_path,
+    xy_example_values,
+    styles_in_scienceplots_per_folder,
+    tmp_path,
 ):
     """Tests if the styles are correctly formatted and can be applied to a plot."""
     pparam = {"xlabel": "Voltage (mV)", "ylabel": r"Current ($\mu$A)"}
