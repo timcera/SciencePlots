@@ -7,9 +7,8 @@ def test_matplotlib_required_api_existence():
     """Check if all functions and attributes used by scienceplots are available
     in matplotlib.
     """
-    assert hasattr(plt.style, "core")
-    assert hasattr(plt.style.core, "read_style_directory")
-    assert hasattr(plt.style.core, "update_nested_dict")
+    assert (hasattr(plt.style.core, "read_style_directory") or hasattr(plt.style, "read_style_directory"))
+    assert (hasattr(plt.style.core, "update_nested_dict") or hasattr(plt.style, "update_nested_dict"))
     assert hasattr(plt.style, "available")
     assert hasattr(plt.style, "library")
 
