@@ -21,6 +21,9 @@ def read_styles_in_folders(root_path):
     """
     stylesheets = {}  # plt.style.library is a dictionary
     for folder, _, _ in os.walk(root_path):
-        new_stylesheets = plt.style.core.read_style_directory(folder)
+        try:
+            new_stylesheets = plt.style.read_style_directory(folder)
+        except AttributeError:
+            new_stylesheets = plt.style.core.read_style_directory(folder)
         stylesheets.update(new_stylesheets)
     return stylesheets
